@@ -26,9 +26,9 @@ Slack #epa
 -->
  
 
-[Community Profiles - Industry Evaluator](info/)  
-[Starter samples](start/) <!--and [datasets](https://github.com/modelearth/community) -->and 
-[Embeddable IO Charts](../io/charts) which use static JSON files generated from the [USEEIO&nbsp;API](https://github.com/usepa/useeio_api/wiki/Use-the-API).  
+[Community Profiles: Industry Evaluator](../../localsite/info/)  
+[Starter samples](../../community/start/) <!--and [datasets](https://github.com/modelearth/community) -->and 
+[Embeddable IO Charts](../../io/charts) using the [USEEIO&nbsp;API](https://github.com/usepa/useeio_api/wiki/Use-the-API).  
 
 ---
 <!--
@@ -79,10 +79,12 @@ Teams will collaborate using one or more of the following:
 - Entries should be easy to integrate with other projects.  
 - Please avoid using CMS content systems like Wix and WordPress.  
 - Provide documentation of set-up steps in a markdown file.
-- Include an index.html file that loads your readme.md file into HTML (like the current page).
+- Include an index.html file that loads your readme.md file into HTML 
+  (The "[localsite](../../localsite/)" repo provides a process for displaying readme files.).
 - Have judges try your install steps multiple times before the competition ends.  
 - Detached frontends should have an index.html file in their root.
 - Detached frontends should work under any domain when hosted as a Github fork.  
+- Employees of EPA, GDED and GDIT are not eligible for awards.  
 
 **Judging Rubric**  
 

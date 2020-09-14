@@ -142,10 +142,15 @@ crossorigin=""></script>
           <a href="https://model.earth/community/challenge/"><img src="../img/overview/banner-1.png" style="width:270px;"></a>
         </div>
 
-        <b><span class="siteTitleShort"></span></b>
+        <b>Circular Economies</b>
         <br>
         
-        <h1 class="h1-home">Circular Economies</h1>
+        <h1 class="h1-home" style="margin-bottom: 0px"><span class="siteTitleShort"></span></h1>
+
+        The <span class="siteTitleShort"></span> website focuses on providing maps and data visualizations  
+        that combine industry and environmental data using <a href="../../io/charts/">Embeddable IO Widgets</a>.
+        
+
 
         <h2>Community Apps for Life Cycle Assessment (LCA)</h2>
         <!--
@@ -209,7 +214,7 @@ crossorigin=""></script>
           <h2>Upcoming Events and Internships</h2>
           During the summer of 2020, Georgia communities are participating in our Life Cycle App Ideas Challenge to set objectives and priorities. 
           Georgia Tech interns are updating modules for local and regional analysis. 
-          In the Fall of 2020, we'll expand on the new community tools during the Code for America <a href="../challenge">Sustainable Communities Web Challenge</a> which will provide $10,000 in awards. 
+          In the Spring of 2021, we'll expand on the new community tools during the Code for America <a href="../challenge">Sustainable Communities Web Challenge</a> which will provide $10,000 in awards. 
           <a href="../challenge" style="white-space: nowrap">Learn More and Register</a>.<br><br>
 
           <b>What's new:</b><br>
@@ -362,10 +367,13 @@ crossorigin=""></script>
 
       <a href="https://model.earth/io/charts/">View our new embeddable US EEIO charts - Get Involved!</a><br>
 
-      The screenshot below is from the EPA's new Sustainable Materials Management <a href="https://www.epa.gov/smm/sustainable-materials-management-prioritization-tools">Prioritization Tool Suite</a> which uses the USEEIO model. Here's an <a href="../start/dataset/">IO Module Starter</a> generated from a CSV file output from the USEEIO API.<br><br>
+      The screenshot below is from the EPA's new Sustainable Materials Management <a href="https://www.epa.gov/smm/sustainable-materials-management-prioritization-tools">Prioritization Tool Suite</a> which uses the USEEIO model.<br><br>
 
-      <img src="../img/overview/heatmap.png" style="width:100%">
-      <br><a href="../resources/USEEIO/">How is this chart generated?</a>
+      <a href="../../io/build/industry_list.html?view=mosaic&count=50"><img src="../img/overview/heatmap.png" style="width:100%"></a>
+      <br>
+      <a href="../../io/build/industry_list.html?view=mosaic&count=50">View Latest Widget</a> | 
+      <a href="../resources/useeio/">How is this chart generated? (Python example)</a> | 
+      <a href="../start/dataset/">Layout Mockup</a> 
       <br><br>
 
       <style>
@@ -554,10 +562,10 @@ crossorigin=""></script>
     <div class="content contentpadding" style="margin-top:0px">
       <div>
         <h1 style="margin-bottom:0px">Recycling Processors (B2B)</h1>
-        <a href="https://data.georgia.org/#recycling" target="_parent">Additional Maps</a> - Landfills, Inert Waste, Transfer Stations
+        <a href="https://georgiadata.github.io/explore/#recycling" target="_parent">Additional Maps</a> - Landfills, Inert Waste, Transfer Stations
       </div><br><br>
 
-      <iframe class="block-map-directory cf" id="map_directory" src="https://data.georgia.org/site/widget.html#processors" style="width:100%;height:800px"></iframe>
+      <iframe class="block-map-directory cf" id="map_directory" src="https://map.georgia.org/explore/site/widget.html#processors" style="width:100%;height:800px"></iframe>
     </div>
   </section>
 
@@ -578,11 +586,13 @@ crossorigin=""></script>
         <img src="../img/overview/places-us.gif" style="width:100%; max-width:300px;">
       </div>
 
-      
-      Location and product data will be harvested from existing websites and databases using the techniques developed for 
-      <a href="https://github.com/alltheplaces/alltheplaces" style="white-space: nowrap;">All The Places</a>. 
-      Over 450 spiders and scrapers pull data nightly from sites that post their 
-      locations online. Material input-output requests can be shared using CSV files, HTML posts and API feeds.<br><br>
+      <!--
+      Location and product data harvested from existing websites and databases using the techniques developed for 
+      -->
+      <a href="https://github.com/alltheplaces/alltheplaces" style="white-space: nowrap;">All The Places</a> - Over 450 spiders and scrapers pull data nightly from sites that post their locations online. 
+
+      Using similar data harvesting techniques and APIs like Google Places, Google Knowledge Graph and DiffBot, 
+      material input-output requests could be shared using CSV files, HTML posts and API feeds.<br><br>
 
       <b>Example:</b> Your construction contract has a requirement to use 50% reclaimed lumber. 
       Share a spreadsheet documenting how much lumber you need and when you need it.  Groups like 
@@ -590,7 +600,7 @@ crossorigin=""></script>
       watch for taredown dates that fit your schedule.
       <br><br>
 
-      In addition, census data from <a href="https://uszipcode.readthedocs.io/01-Tutorial/index.html">uszipcode datasets</a>, will be combined with establishment and employment counts from the <a href="../industries">Complete ZIP Code Industry Detail Files</a> to model impacts using the <a href="https://github.com/usepa/useeio_api/wiki/Use-the-API">USEEIO API</a>.<br><br>
+      In addition, census data from <a href="https://uszipcode.readthedocs.io/01-Tutorial/index.html">uszipcode datasets</a>, will be combined with payroll, establishment and employment counts from <a href="../industries">zip code industry data</a> to visualize impacts using <a href="../../io/charts/">Embeddable IO widgets</a>.<br><br>
 
       <a href="../start/feed">Publish your Inventory and Wishlist Data</a>
       <br><br>
@@ -671,6 +681,7 @@ crossorigin=""></script>
     dp2.markerType = "google";
     dp2.listLocation = false;
 
+    param.show = "smart"; // Used by loadFromCSV which is called by loadMap1
     loadMap1(dp2);
 
     /*
