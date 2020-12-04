@@ -1,39 +1,53 @@
-<h1 class="h1-home">Sustainable Communities Web Challenge</h1>
+<h1 class="h1-home">2021 Programming Events</h1>
 
-<div style="display:none" class="challenge-details">
-<h3 style="font-weight:400">Monday, Sept. 21, 2020 to Sunday, Oct. 25, 2020</h3>
 
-Choose an area below to compete for $10,000 in awards.  Winning entries will use the US EPA's Input-Output Widgets to create tools for communities using 24 environmental indicators applied to close to 400 industries.  
+<h3 style="font-weight:400">
+<div style="font-size: 14px">Saturday, January 23, 2021</div>
+Electric Vehicle Ecosystem Hackathon<br><br>
 
-<b>Slack Workspace:</b> [model-earth.slack.com](https://model-earth.slack.com/) - Register Online first to be added to Slack.   
+<div style="font-size: 14px">Fall 2021</div>
+Sustainable Communities Web Challenge
+</h3>
+
+
+<div class="challenge-details">
+We're combining economic and envronmental data with planning input using the EPA's new environmental indicator models. Choose an area below to compete for $10,000 in awards in 2021 using new input-output widgets to create interfaces for communities using 24 environmental indicators across 388&nbsp;industries.<br><br> 
+ 
 </div>
 
 <div>
 
 <!-- Schedule & Rules -->
-<a href="challenge/" class="btn btn-primary">About Event</a>
+<a href="challenge/" class="btn btn-primary">About Events</a>
 
 <a href="challenge/registration/" class="btn btn-success">Register Online</a>
 
-<a href="slack://channel?id=C018UHD088P&team=T0199FVNEGK" class="btn btn-danger">Slack Desktop</a>
+<a href="challenge/slack/" class="btn btn-danger">Slack Clubs</a>
+
 
 </div>
 
 ## Project Areas
 
 <div style="display:none" class="challenge-details">
+
+
+
+<!--
 Teams that contribute to these broad areas have a good chance of earning an award of 
 <span style="white-space: nowrap">$1,000, $1,500 or $2,500.</span>
+-->
 </div>
 
-**A. Zipcode Demographics, Industries, Impacts and Machine Learning**  
+**A. Demographics, Industry Analytics, Impacts and Machine Learning**  
+- [R-Language Update](https://model.earth/community-data/us/) - Generate a list with lat/lon values for map zoom.  
+- Output [All the Places](/community/tools/#places) into zip folders - Save in [zip/io/data](https://model.earth/zip/io/) folders where demographics .json files reside.
 - Expand upon [county-based results](../localsite/info/) to provide zipcode-based industry lists. - [Details](industries) 
-- Add zipcode demographics using [uszipcode.readthedocs.io](https://uszipcode.readthedocs.io/01-Tutorial/index.html). (Python and D3)  
-- Analyse and visualize relationships between demographics, industries and impacts.  
+- Update <a href="../io/charts/">Embeddable IO Charts and Maps</a> to include demographics, local places, industries and impacts.  
 
 
 **B. Supply Chain Inflow-Outflow Charts**  
-- Updates to Sankey D3 Charts, Leaflet Maps and Filters for [Industry Impact Evaluator](../localsite/info/)  
+- Updates to Sankey D3 Charts, Leaflet Maps with [Maps for Us](../../localsite/map/mapsforus/) and Filters for [Industry Impact Evaluator](../localsite/info/)  
 - Create embeddable charts that use hash parameters (Python and D3, optionally React) - [Details](../io/charts/sankey/)  
 
 
@@ -88,14 +102,14 @@ And/or <a href="https://www.apollographql.com/docs/apollo-server/">Apollo</a> Gr
 
 ### Python and R-Language
 
-1. Create and update scripts that pull data and pre-process into csv and json files.  
+1. Create and update scripts that pull data and pre-process into csv and json files for [industry zip code searches](industries/) and [local commodity searchs](/localsite/info/data/).  
 
 1. Work with the [USEEIO API](https://github.com/usepa/useeio_api/wiki/Use-the-API) and update [Input-Output charts](https://github.com/USEPA/useeio-widgets). Widgets are loaded from JSON files generated from 
 our [API endpoints](https://s3.amazonaws.com/useeio-api-go-swagger-staging/index.html) on AWS <!-- also https://smmtool.app.cloud.gov/ -->for Goods & Services demand vectors (Food System and Full System).  
 
-1. [RStudio and USEEIOR](../io/naics) - Use LCA methodology to evaluate new technologies [including advanced biofuels](../io/bioeconomy/)
+1. Update [Django Census Reporter](resources/censusreporter) by staring with the Python 3 Wazimap [fork](resources/censusreporter) used in Africa and India. Integrate US demographic data from Python 2 version. Set up Docker to [deploy to Heroku](https://github.com/datamade/how-to/blob/master/heroku/deploy-a-django-app.md) using a [containerization template](https://github.com/datamade/how-to/tree/master/docker/templates). Learn more [about using Heroku or AWS](https://datamade.us/blog/why-were-switching-to-heroku/).  
 
-1. Update [Django Census Reporter](resources/censusreporter) by staring with the Python 3.* Wazimap fork used in Africa and India. Populate database using most recent US Census API.  
+1. [RStudio and USEEIOR](../io/naics) - Use LCA methodology to evaluate new technologies [including advanced biofuels](../io/bioeconomy/)  
 
 ### Microsoft .NET
 
@@ -112,6 +126,10 @@ Add USEEIO widgets to [.NET Environmental Education tools](../setup/) for GEEP p
 Maintain a list of your time contributions to increase your award potential!  
 [Let us know](../localsite/info/input/) what you're working on to avoid overlaps.  
 
+## Community Map
+
+- [Update R-Language script](../community-data/us/) to output dropdown list attributes for map zoom.
+
 ## Bubble Chart
 
 D3 - [View Widget](../io/charts/bubble/) 
@@ -122,60 +140,57 @@ D3 - [View Widget](../io/charts/bubble/)
 - Omit red from the scale when other [bubbles are highlighted](../localsite/info/).  
 - Create React version.  
 
-## Industry-List and Mosaic
+## Industry-List and Heatmap Mosaic
 
-React - [View Widget](../io/build/industry_list.html?view=mosaic&count=50) - [Details](../io/charts/) 
+React - [View Widget](../io/build/sector_list.html?view=mosaic&count=50) - [All Widgets](../io/charts/) 
 
 - When column selected, avoid dimming other columns.  
-<img style="display:inline; float:right; width:60px" src="img/overview/slider-mockup.png">  
-- Add [sliders](https://material-ui.com/components/slider/) to right of rows to adjust levels for multiplier effect.  
+- React javascript is too big (2MB and growing). Split out widgets.     
 - Include tabs at top: 20 categories, 388 industry sectors, X selected - [mock up](start/dataset/)
-- Show list of selected sectors under "X selected" tab
-- As default, turn-off movement of selected checkbox. Show duplicates in X selected tab instead.
-- Display parent categories that open to reveal subcategories
+- Show list of selected sectors under "X selected" tab. Include duplicate checkboxes in "X selected" tab.  
+- Display parent NAICS industry categories that open to reveal subcategories
 - Display the quantity selected after each parent category title in parenthesis
-- Custom sets could use the same csv/json format.
 
 - Toggle matrices using a dropdown menu to select a matrix
 - List by parent category.
-- Include a 3-dot menu with the options: Sort alphabetical, Change matrix, Show values 
+- Include menu with options: Alphabetical, Show values 
 - Show values like [sortable example](https://model.earth/community/start/dataset/sortable.html)
 - Include verticle column name like [dataset example](https://model.earth/community/start/dataset/)
 - Highlight an "Action" menu when checkboxes are clicked
 - Actions could include: Display on map, Display bar chart, Generate Report
 
 
-## Slider Details  
+## Inflow-Outflow Chart
 
-The editable number could appear when clicking the slider.  
-The editable number could disappear after a few seconds of inactivity.  
+[Inflow-Outflow Chart](../io/charts/inflow-outflow/#sectors=326210&page=1&count=10) - 
+<a href="../io/build/slider.html#sectors=322130,327910,541200&page=1&count=10">Widget only</a> - 
+<a href="../io/charts/">All Widgets</a>
 
-The slide bar could replace the bar currently to the right of the rows.  
-The dot could be relative to the other rows, matching how you have the bar length.  
+Add Airbender visuals.  
 
+Prevent multiple stepping backing-up by avoiding saving history with each hash change.  
+
+<!--
 The bar could turn green when a commodity has been increased from its default.  
 The bar could turn red when a commodity has been decreased from its default.  
+-->
 
-The sliders will be used to show multiplier effects.  
-
-The hash syntax for a 99% and 300% adjustment could be:  
-sectors=311615:99,550000:300  
-
-
+<!--
 ## Impact Bar Chart
 
 React - [View Widget](../io/build/impact_chart_config.html#sectors=334111,334210,334220&perspective=direct&analysis=Consumption) - [Details](../io/charts/) 
 
 
-- Create an example with three coluns and one impact area per colums.  
+- Create an example with three columns and one impact area per colums.  
 - Display sector titles to the left of the first column.
 - Display sector name over each bar.  
 - Display description of each indicator
 - Update for use with Darkly bootstrap, similar to [bubble chart](../io/charts/bubble) - click bubble to view impact chart.  
+-->
 
 ## Last Airbender
 
-For potential use in an elementary school education interface, the EPA indicators could be organized by Air, Water, Land, and Fire (Energy), plus two additional categories: Prosperity (Economy) and Wellness (Health).  
+For use as an [elementary school education interface](../../io/charts/inflow-outflow/#sectors=326210&page=1&count=10), the EPA indicators are being organized by Air, Water, Land, and Fire (Energy), Prosperity (Economy) and Health.  
 
 The Airbender categories have been added as Primary and Secondary columns in [LCIA_Indicator_sets.csv](../community-data/us/indicators/LCIA_Indicator_sets.csv) and in the [Bio-Modeling Branch](https://github.com/modelearth/useeior/blob/Bio-Modeling/inst/extdata/USEEIO_LCIA_Indicators.csv).  
 
@@ -190,9 +205,9 @@ The estimates for these omitted industry values could be generated using the sta
 ##Data Integration
 
 
-1. US Bureau of Economic Analysis - expand on the industry level data in our [Community Info Page](info/).  
+1. US Bureau of Economic Analysis - expand on the industry level data in our [Community Info Page](../localsite/info/).  
 
-1. Updates for [Farm Fresh - Federal USDA location data](farmfresh/ga) on maps - initially merged for Aglanta.  
+1. Updates for [Farm Fresh - Federal USDA location data](farmfresh) on maps - initially merged for Aglanta.  
 
 
 1. Preprocess the [uszipcode programmable database (Python)](https://uszipcode.readthedocs.io/01-Tutorial/index.html) - [Github](https://github.com/MacHu-GWU/uszipcode-project) with [zip map](zip/leaflet/).  
@@ -207,10 +222,7 @@ Fix JSON reader in [zip search](zip/#zip=30315)
 
 1. Use [PWA Starter](resources/pwa) to add an index.html page and thumbnails to the pwa folder.
 
-1. Display [Georgia Recycling data](recycling/ga/) in Leaflet map layers.
-
-
-1. Deploy Leaflet in Widget. Include [windy.com](https://windy.com) weather layer using their [API for Leaflet](https://github.com/windycom/API).
+1. Deploy Leaflet in Widget. See [windy.com](https://windy.com) weather layer using their [API for Leaflet](https://github.com/windycom/API).
 
 
 1. Cross-relate Goods & Services NAICS industries with Harmonized System (HS Codes) for [International Trade](https://georgiadata.github.io/display/products/)
@@ -234,11 +246,11 @@ National Renewable Energy Laboratory (NREL) - alternative fuel stations
 <div>
 
 <!-- Schedule & Rules -->
-<a href="challenge/" class="btn btn-primary">About Event</a>
+<a href="challenge/" class="btn btn-primary">About Events</a>
 
 <a href="challenge/registration/" class="btn btn-success">Register Online</a>
 
-<a href="slack://channel?id=C018UHD088P&team=T0199FVNEGK" class="btn btn-danger">Slack Desktop</a>
+<a href="slack/" class="btn btn-danger">Slack Groups</a>
 
 </div>
 
