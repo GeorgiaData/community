@@ -5,15 +5,15 @@
 <meta charset="utf-8">
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <link rel="icon" type="image/x-icon" href="../../img/logo/favicon.png" />
-<title>Mobility Sector - EV Ecosystem</title>
+<title>Automotove NAICS Data - Mobility Sector - EV Ecosystem</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="../../../localsite/css/base.css" />
-<script type="text/javascript" src="../../js/d3/d3.v5.min.js"></script>
-<script type="text/javascript" src="../../../localsite/js/showdown.min.js"></script>
-<script type="text/javascript" src="../../../localsite/js/jquery.min.js"></script>
-<script type="text/javascript" src="../../../localsite/js/localsite.js"></script>
-<script type="text/javascript" src="../../../localsite/js/navigation.js"></script>
+<link rel="stylesheet" href="../../../localsite/css/base.css" id="/localsite/css/base.css" />
+<script type="text/javascript" src="../../../localsite/js/d3.v5.min.js" id="/localsite/js/d3.v5.min.js"></script>
+<script type="text/javascript" src="../../../localsite/js/showdown.min.js" id="/localsite/js/showdown.min.js"></script>
+<script type="text/javascript" src="../../../localsite/js/jquery.min.js" id="/localsite/js/jquery.min.js"></script>
+<script type="text/javascript" src="../../../localsite/js/localsite.js?sidecolumn=community/nav.html"></script>
+<script type="text/javascript" src="../../../localsite/js/navigation.js" id="/localsite/js/navigation.js"></script>
 
 <style>
 .img-boarder {
@@ -34,33 +34,53 @@
 </head>
 
 <body>
-
+<div id="allsections">
+<section id="mobility">
 <div class="content contentpadding">
+
+	<h1>Electric Vehicles - NAICS Data</h1>
 
 	<div id="readmeDiv"></div>
 
 	<script>
-	    loadMarkdown("README.md", "readmeDiv", "_parent");
+	    //loadMarkdown("README.md", "readmeDiv", "_parent");
 	</script>
+
+	Data collection for comparing Electric Vehicle and Internal Combustion Engine (ICE) production.<br><br>
 
 	<!--
 	<a href="../../../localsite/info/#show=ev&show=counties">Electric Vehicle manufacturing industries by county</a> | 
 	-->
-	<a href="../../../localsite/map/#show=ev&q=Yes&search=ev+industry">Electric Vehicle Manufacturing</a><br>
-	<a href="../../../localsite/info/#show=vehicles">Motor Vehicle and Motor Vehicle Equipment Manufacturing</a><br>
+	&bull; <a href="../../../localsite/info/#show=vehicles">Automotive and Aircraft Manufacturing</a><br>
+	&bull; <a href="../../../apps/ev/">Community App: West Central Georgia Vehicle Manufacturing</a><br>
+	<!-- stopped working, could be switch from Google Sheet to CSV -->
+	<!--
+	&bull; <a href="../../../localsite/info/#show=vehicles&state=GA&q=Yes&search=ev+industry">Electric Vehicle Related Manufacturing</a><br>
+	-->
 	<br>
 
 	Industry areas adversely and positively impacted by the transition to electric vehicles.
 
 	<div style="color:#333">
-		<h3>Parts Manufacturing</h3>
+		<h3>Automotive/Parts Manufacturing by NAICS</h3>
 	
 		336111 - Automotive Manufacturing<br>
+		336211 - Motor Vehicle Body Manufacturing<br>
+		<span class="red">336310 - Motor Vehicle Gasoline Engine and Engine Parts Manufacturing</span><br>
+		<span class="green">336320 - Motor Vehicle Electrical and Electronic Equipment Manufacturing</span><br>
 		336330 - Motor Vehicle steering and suspension manufacturing<br>
 		336340 - Motor Vehicle braking and component systems manufacturing<br>
 		336360 - Motor Vehicle seating and interior trim manufacturing<br>
-		336370 - Motor Vehicle metal stamping manufacturing<br>
+
+
+		336370 - Motor Vehicle Metal Stamping<br>
 		336390 - Other Motor Vehicle Parts Manufacturing<br>
+		<span class="red">336350 - Motor Vehicle Transmission and Power Train Parts Manufacturing</span><br>
+		336360 - Motor Vehicle Steering and Interior Trim Manufacturing<br>
+		
+		
+		331110 - Iron and Steel Mills and Ferroalloy Manufacturing<br>
+		<span class="red">333618 - Other Engine Equipment Manufacturing</span><br>
 		<span class="red">333613 - Mechanical power transmissions equipment manufacturing</span><br>
 		336412 - Aircraft engines and engine parts manufacturing<br>
 		336413 - Other aircraft parts and auxiliary equipment manufacturing<br>
@@ -75,20 +95,12 @@
 		325211 - Plastics material and resin manufacturing<br>
 		325520 - Adhesives manufacturing<br>
 		326112 - Plastics packaging film manufacturing<br>
+		326199 - All Other Plastic Product Manufacturing<br>
 		<span class="red">326220 - Rubber and plastics hoses and belt manufacturing</span><br>
 		331221 - Rolled steel shape manufacturing<br>
 		332211 - Forging and stamping<br>
 
-		336370 - Motor Vehicle Metal Stamping<br>
-		336390 - Other Motor Vehicle Parts Manufacturing<br>
-		<span class="red">336350 - Motor Vehicle Transmission and Power Train Parts Manufacturing</span><br>
-		336360 - Motor Vehicle Steering and Interior Trim Manufacturing<br>
-		<span class="red">336310 - Motor Vehicle Gasoline Engine and Engine Parts Manufacturing</span><br>
-		326199 - All Other Plastic Product Manufacturing<br>
-		331110 - Iron and Steel Mills and Ferroalloy Manufacturing<br>
-		<span class="red">333618 - Other Engine Equipment Manufacturing</span><br>
-		336211 - Motor Vehicle Body Manufacturing<br>
-		<span class="green">336320 - Motor Vehicle Electrical and Electronic Equipment Manufacturing</span><br>
+		
 
 		<h3>Broader than manufacturing</h3>
 
@@ -98,7 +110,7 @@
 		<span class="red">811111 - General automotive repair shops</span><br>
 		<br>
 
-		Dealerships typically generate over 40% of their gross profit pool in service and maintenance, which will drop at least 60% with since EVs require fewer fluid changes and parts replacements.<br>
+		Dealerships typically generate over 40% of their gross profit in service and maintenance, which is predicted to drop at least 60% since EVs require fewer fluid changes and parts replacements.<br>
 
 
 	</div>
@@ -108,6 +120,8 @@
 
 	
 	<h3>Data Sources</h3>
+
+	Create a copy of the vehicle manufacturer <a href="https://docs.google.com/spreadsheets/d/1OX8TsLby-Ddn8WHa7yLKNpEERYN_RlScMrC0sbnT1Zs/edit#gid=0">Google Sheet</a> to activate additional states.<br><br>
 
 	1. <a href='https://explorer.gdol.ga.gov/vosnet/drills/employer/empdrill.aspx?session=jobseek'>Georgia Labor Market Explorer</a><br><br>
 
@@ -133,7 +147,7 @@
 
 	2. <a href="https://www.selectgeorgia.com/resources/publications/automotive-in-georgia/">Select Georgia Automotive</a> - <a href="https://www.selectgeorgia.com/documents/636/Automotive_Industry_Publication_2020.pdf">2020 PDF</a> - Use Adobe Acrobat, Copy with Formatting, and then Paste Special XML in Excel.<br> 
 
-	3. <a href="https://www.georgia.org/industries/automotive">Georgia.org Automotive PDF</a> - Manual add addresses and employee accounts.<br>
+	3. <a href="https://www.georgia.org/industries/automotive">Georgia.org Automotive PDF</a> - Manually add addresses and employee accounts.<br>
 	<br>
 	<br>
 
@@ -142,9 +156,17 @@
 	2017 - 1% of car sales<br>  
 	2020 - 4% of car sales<br>  
 	2025 - 22% of car sales (Deutsche Bank projection)<br>  
+	<br>
+
+	<a href="https://www2.deloitte.com/global/en/pages/energy-and-resources/articles/accelerating-smart-manufacturing-the-value-of-an-ecosystem-approach.html?id=gx:2em:3ext:4Ecos_region:5awa:6er:20210218">Using ecosystems to accelerate smart manufacturing - A regional analysis</a><br>
+	Ecosystems form when a collaborative network of stakeholders—enabled by digital technology—come together in meaningful ways to solve shared challenges and meet shared objectives.
+	<br><br>
+	
+	<a href="../../../community/architecture/">New Countryside</a>
 
 </div>
-
+</section>
+</div>
 
 
 </body>

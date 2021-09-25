@@ -1,9 +1,18 @@
 # Map Samples
 
-<!-- ## [Widget Mockup for EPA (layout)](../../resources/layout/)-->
-## [Map Layers](../../../localsite/map/) - [Map Widget](../../../localsite/info/embed.html#show=360)<!-- [Older](../../map/starter/embed.html)-->  
-## [Geocoding (vaccine distributors)](../../../localsite/map/neighborhood/)
-## [US Income (choropleth map)](../../map/income)
+## [Leaflet Map Layers](../../../localsite/map/)
+Map script resides in localsite/js/map.js and localsite/js/map-filters.js.  
+
+## [Map as a Widget](../../../localsite/info/embed.html)<!-- [Older](../../map/starter/embed.html)-->  
+The localsite/map/index.html page is loaded as a template.  
+
+## [Brigade Map](../../../apps/brigades/)
+[Brigade Project Network](https://projects.brigade.network/) and [Column Names](../../../localsite/map/neighborhood/)
+<!-- 
+CfA Taxonomy: http://bluecompass.org/cfa/taxonomy2.html
+democracy lab index: https://www.democracylab.org/api/projects/?page=1 -->
+
+## [US Income by County (choropleth map)](../../map/income)
 ## [Industry Mix (zip codes)](../../zip/leaflet/#columns=JobsAgriculture:50;JobsManufacturing:50)
 ## [Sets of Counties (counties)](counties/counties.html)
 ## [Driving Tour (routing)](../routing)
