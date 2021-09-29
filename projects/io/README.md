@@ -94,11 +94,13 @@ Optimization for web - Decimal removal and restoration ([Issue 54](https://githu
 
 ## JQuery/D3 - Bubble Chart
 
-[On Industry Page (at bottom)](../../../localsite/info/#state=GA) - [Stand-Alone Widget (inactive)](../../../io/charts/bubble/) 
+[On Industry Page (at bottom)](../../../localsite/info/#state=GA) - [Stand-Alone Widget for testing](../../../io/charts/bubble/) 
 
-- Adjust intial darkness - seems to be overlapping itself
-- Modify so popups still appear when the containing div is set to position:relative. 
-- Scale to size of containing div during browser resize. 
+- Adjust initial darkness - seems to be overlapping itself.
+- Rollover does not work unless loading twice. It works after toggling the red highlight. Also works on stand-alone.
+- When toggling the red highlight, show the red again after toggling back. This worked until recently.
+- Optional: Modify so popups still appear when the containing div is set to position:relative. 
+- Optional: Scale to size of containing div during browser resize. 
 
 
 <!--
