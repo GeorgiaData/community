@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-<title>Community Modeling Data</title>
+<title>Community Modeling Data - Model.earth - Better Civic Sites</title>
 <link rel="icon" type="image/x-icon" href="img/logo/favicon.png" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script type="text/javascript" src="../../localsite/js/jquery.min.js" id="/localsite/js/jquery.min.js"></script>
 <script type="text/javascript" src="../js/d3/d3.v5.min.js"></script>
 <script type="text/javascript" src="../../localsite/js/showdown.min.js" id="/localsite/js/showdown.min.js"></script>
-<script type="text/javascript" src="../../localsite/js/localsite.js?sidecolumn=community/nav.html"></script>
+<script type="text/javascript" src="../../localsite/js/localsite.js?display=locfilters&sidecolumn=community/nav.html"></script>
 <script type="text/javascript" src="../../localsite/js/navigation.js" id="/localsite/js/navigation.js"></script>
 <link type="text/css" href="../../localsite/css/base.css" rel="stylesheet" id="/localsite/css/base.css" />
 
@@ -18,27 +18,21 @@
 -->
 
 <!-- For Facebook -->
-<meta property="og:title" content="2021 Sustainable Communities Web Challenge - Code for America" />
+<meta property="og:title" content="Model.earth - Better Civic Sites" />
 <meta property="og:type" content="article" />
 <meta property="og:image" content="https://model.earth/community/img/overview/code-for-america-rect.jpg" />
 <meta property="og:url" content="https://model.earth/community/" />
-<meta property="og:description" content="Economic data, community resources and planning input combined with the EPA's new environmental indicator models." />
+<meta property="og:description" content="Economic data, community resources and planning input combined with the EPA's new environmental indicator model." />
 
 <!-- For Twitter -->
 <meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="2021 Sustainable Communities Web Challenge - Code for America" />
-<meta name="twitter:description" content="Economic data, community resources and planning input combined with the EPA's new environmental indicator models." />
+<meta name="twitter:title" content="Model.earth - Better Civic Sites" />
+<meta name="twitter:description" content="Economic data, community resources and planning input combined with the EPA's new environmental indicator model." />
 <meta name="twitter:image" content="https://model.earth/community/img/overview/code-for-america-rect.jpg" />
 
-</head>
-
-<!--
-    12-digit FIPS Code - state, county, tract, block group
-    https://www.policymap.com/2012/08/tips-on-fips-a-quick-guide-to-geographic-place-codes-part-iii/
--->
-<body>
 <script>
   //loadMarkdown("README.md", "readmeDiv", "_parent");
+  loadMarkdown("intro.md", "introDiv", "_parent");
   loadMarkdown("../../io/template/label.md", "widgetsDiv", "_parent");
   loadMarkdown("profile-editor/README.md", "profileDiv", "_parent");
   loadMarkdown("io/README.md", "ioDiv", "_parent");
@@ -114,6 +108,16 @@
     margin-top:0px;
 }
 </style>
+
+</head>
+
+<!--
+    12-digit FIPS Code - state, county, tract, block group
+    https://www.policymap.com/2012/08/tips-on-fips-a-quick-guide-to-geographic-place-codes-part-iii/
+-->
+<body>
+<div id="bodyFile"></div>
+
 <div id="log_display" style="display:none"></div><!-- a work in progress -->
 
 <div style="background-color: #dae8eb; text-align: center; overflow: auto; padding:0px; border:0px">
@@ -131,7 +135,7 @@
             -->
         </div>
 
-        <a href="challenge/"><img src="../img/overview/banner-2.png" class="hideMobile" style="float:left; max-height:300px;"></a>
+        <a href="../"><img src="../img/overview/banner-2.png" class="hideMobile" style="float:left; max-height:300px;"></a>
         </div>
     </div>
 </div>
@@ -149,9 +153,11 @@
 
     <h1 style="font-size:32px">Project Areas</h1>
 
+     <!--
     <a href="../challenge/">Participate</a> individually or with a team in the <a href="../challenge/">Sustainable Communities Web Challenge</a><br><br>
-
+   
     NEW: <a href="../challenge/how/">Learn how to prepare a winning entry!</a><br><br>
+    -->
 
     <div style="clear:both; overflow: auto;">
       <div id="readmeDiv"></div>
@@ -162,27 +168,7 @@
         https://github.com/hackforla/engineering
     -->
 
-    <a href="../../apps/">Starter Pages</a> - Copy and add parameters<br>
-    <a href="../../community/projects/#widgets">UX/UI</a> - Mini & Super Widgets<br>
-    <a href="../../community/projects/#profile-editor">JQuery/React</a> - Environmental Profile Editor<br>
-    <a href="../../community/projects/#io">React/JS</a> - Inflow-Outflow and Sankey Charts<br>
-    <a href="../../community/projects/#github-actions">Python/R</a> - GitHub Actions Data Pipeline<br>
-    <a href="../../community/projects/#python">Python</a> - Machine Learning<br>
-    <a href="../../community/projects/#ux">UX/UI</a> - Community Hotspots Environmental Report (CHER)<br>
-    <a href="../../community/projects/#cinematic">Cinematic</a> - Environmental Impact Menu<br>
-    <a href="../../community/projects/#maps">Map Projects</a> - Data Visualizations<br>
-    <a href="../../community/projects/#google">Google and More</a> - Google Data Commons, Sheet Editor, .NET Core, Census Reporter, Walkability
-    <br>
-    <a href="../../apps/smm/">3.0 Mockup</a> - Lifecycle Tools<br><br>
-
-    Challenge participants are creating pages in the shared <a href="../../apps/">community pages</a> apps repo.<br>
-    All entries should include <a href="../../localsite/">parameter settings</a> to filter <a href="../../io/charts/">USEEIO widget IO charts</a> by location, impact and/or goods and services.<br><br>
-
-    <!--
-    <h4>Immediate Project Needs</h4>
-    1. Create a node script in the "apps" repo that pulls three <a href="../../localsite/start/">ModelEarth repos</a> (localsite, io and apps) into one local "webroot".<br><br>
-    -->
-
+    <div id="introDiv"></div><br>
     
     <section id="widgets">
     <div class="pagecard">
@@ -199,7 +185,7 @@
         </div>
     </div>
     </section>
-    
+
     <section id="profile-editor">
     <div class="pagecard">
         <div class="cardstyle" style="padding-bottom: 0px">
